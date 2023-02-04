@@ -9,11 +9,12 @@
 }
 
 :root {
-    --side-bar-color: #3d898d;
-    --header-color: #e2dddf;
-    --main-background-color: #b0acb0;
-    --accent-color: #85ebd9;
-    --main-font-color:  #2f404d; 
+    --side-bar-color:#2f2fA2;
+    --header-color: white;
+    --main-background-color: #99738E;
+    --accent-color: #ff184C;
+    --main-font-color:  black; 
+    --svg-size: 25px;
 }
 
 .container {
@@ -26,11 +27,79 @@
 
     
 }
-
+/* Header */
 .header {
     grid-area: 1 / 2 / 1/ 3;
     background-color: var(--header-color);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 30px;
+    
 }
+
+.search-container {
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr 3fr;
+    height: var(--svg-size);
+    align-self: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 10fr ;
+    justify-self: left;
+}
+
+input {
+    height: var(--svg-size);
+    width: 40vw;
+    border-style: none;
+    border-radius: 17px;
+    background-color: var(--main-background-color)
+}
+
+.profile-name {
+    color: var(--main-font-color);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+form > svg {
+    height: var(--svg-size);
+}
+
+.search-container > svg {
+    height: var(--svg-size);
+}
+
+.profile-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr repeat(3, 1fr);
+    gap: 50px;
+    align-self: center;
+}
+
+.profile-name-tag {
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+button {
+    color: var(--header-color);
+    background-color: var(--side-bar-color);
+    border-style: none;
+    border-radius: 20px;
+}
+
+button:active {
+    border: 2px solid var(--side-bar-color);
+    color: var(--side-bar-color);
+    background-color: var(--header-color);
+    box-shadow: 1px 1px 5px var(--side-bar-color);
+ }
+
+/* Sidebar */
 
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
@@ -40,22 +109,33 @@
     
 }
 
-.main {
-    grid-area: 2 / 2 / 3 / 3;
-    background-color: var(--main-background-color);
-}
-
-.navtile > svg {
-    width: 35px;
+.navtile > a > svg {
+    width: var(--svg-size);
     fill: var(--header-color);
 }
 
-.navtile {
+.navtile > a {
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 5px;
-    color: var(--header-color)
+    color: var(--header-color);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+/* Main */
+
+.main {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--main-background-color);
 }
 
 
