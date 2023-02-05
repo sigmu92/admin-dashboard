@@ -14,14 +14,14 @@
     --main-background-color: #99738E;
     --accent-color: #ff184C;
     --main-font-color:  black; 
-    --svg-size: 25px;
+    --svg-size: 30px;
 }
 
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
     font-family: roboto;
 
@@ -123,6 +123,10 @@ button:active {
     text-decoration: none;
 }
 
+#dashboard {
+    height: 50px;
+}
+
 a {
     text-decoration: none;
 }
@@ -136,6 +140,75 @@ a:visited {
 .main {
     grid-area: 2 / 2 / 3 / 3;
     background-color: var(--main-background-color);
+    display: grid;
+    gap: 5px;
+    
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 5% 45% 5% 45%;
+    padding: 3% 4% 4% 2%
+}
+
+.projects-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr ;
+}
+
+.main-text{
+    font-size: 1.0rem;
+    font-weight: 900;
+    color: var(--main-font-color);
+}
+
+#announcements {
+    grid-column-start: 2;
+}
+
+.annoucements-container {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--header-color);
+    border-style: none;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.annoucement-box {
+    font-size: .6rem;
+    padding: 5% 0% 5% 0%;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: var(--accent-color);
+    overflow:hidden
+    
+}
+.announce-title {
+    font-weight: 900;
+}
+
+#last-announce {
+    border-bottom-style: none;
+}
+
+#trending {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.trending-container {
+    grid-area: 4 / 2 / 5 / 3;
+    border-style: none;
+    border-radius: 5px;
+    background-color: var(--header-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.other-container {
+    display: grid;
 }
 
 
